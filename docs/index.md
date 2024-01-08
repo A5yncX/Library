@@ -5,14 +5,14 @@ layout: home
 hero:
   name: "AsyncX's Library"
   text: ""
-  tagline: Hello
+  tagline: 图书馆
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 进入
+      link: /intro
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
   # - title: Feature A
