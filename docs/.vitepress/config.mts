@@ -15,7 +15,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
+      { text: '联系', link: 'https://asyncx.top/zh/#contact' }
     ],
 
     sidebar: generateSidebar({ //自动sidebar
