@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "AsyncX's Library"
-  text: "demo"
+  name: "My Awesome Project"
+  text: "A VitePress Site"
   tagline: My great project tagline
   actions:
     - theme: brand
