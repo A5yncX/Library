@@ -6,16 +6,23 @@ hero:
   name: "AsyncX's Library"
   text: ""
   tagline: 图书馆
+  image:
+    src: logo.svg
+    alt: Maomao
   actions:
     - theme: brand
       text: 进入
-      link: /intro
+      link: /01-home/intro
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
 
 features:
-  # - title: Feature A
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: ✏️
+    title: 工作流/软件使用心得
+    details: Win/Mac/App...
+  - icon: 📇
+    title: 工作流使用心得
+    details: Win/Mac/App
 ---
 
