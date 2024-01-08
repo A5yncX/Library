@@ -17,7 +17,13 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '联系', link: 'https://asyncx.top/zh/#contact' }
     ],
-
+    lastUpdated: {
+      text: '更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    },
     sidebar: generateSidebar({ //自动sidebar
       collapsed: true, //自动折叠
       documentRootPath: '/docs', //自动读取根目录
