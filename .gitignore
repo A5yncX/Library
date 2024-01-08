@@ -1,5 +1,0 @@
-# Ignore Vitepress build output
-docs/.vitepress/dist/
-
-# Ignore Vitepress cache
-docs/.vitepress/.cache/
