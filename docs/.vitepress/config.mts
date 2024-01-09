@@ -27,37 +27,7 @@ export default defineConfig({
     sidebar: generateSidebar({ //自动sidebar
       collapsed: true, //自动折叠
       documentRootPath: '/docs', //自动读取根目录
-      // scanStartPath: null,
-      // resolvePath: null,
-      // useTitleFromFileHeading: true,
       useTitleFromFrontmatter: true, //读取fontmatter的标题属性,如果没有使用文件名
-      // useFolderTitleFromIndexFile: false,
-      // useFolderLinkFromIndexFile: false,
-      // hyphenToSpace: true,
-      // underscoreToSpace: true,
-      // capitalizeFirst: false,
-      // capitalizeEachWords: false,
-      // collapsed: true,
-      // collapseDepth: 2,
-      // sortMenusByName: false,
-      // sortMenusByFrontmatterOrder: false,
-      // sortMenusOrderByDescending: false,
-      // sortMenusOrderNumerically: false,
-      // frontmatterOrderDefaultValue: 0,
-      // manualSortFileNameByPriority: ['first.md', 'second', 'third.md'],
-      // excludeFiles: ['first.md', 'secret.md'],
-      // excludeFolders: ['secret-folder'],
-      // includeDotFiles: false,
-      // includeRootIndexFile: false,
-      // includeFolderIndexFile: false,
-      // includeEmptyFolder: false,
-      // rootGroupText: 'Contents',
-      // rootGroupLink: 'https://github.com/jooy2',
-      // rootGroupCollapsed: false,
-      // convertSameNameSubFileToGroupIndexPage: false,
-      // folderLinkNotIncludesFileName: false,
-      // keepMarkdownSyntaxFromTitle: false,
-      // debugPrint: false,
     }),
 
     socialLinks: [
@@ -66,7 +36,16 @@ export default defineConfig({
 
     search: {
       provider: 'local'
-    }
+    },
+    
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    outline: {
+      label: '页面导航',
+    },
   },
 
   

@@ -13,16 +13,16 @@ hero:
     - theme: brand
       text: 进入
       link: /01-home/intro
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: 我的主页
+      link: https://asyncx.top
 
 features:
-  - icon: ✏️
-    title: 工作流/软件使用心得
-    details: Win/Mac/App...
-  - icon: 📇
-    title: 工作流使用心得
-    details: Win/Mac/App
+  # - icon: ✏️
+  #   title: 工作流/软件使用心得
+  #   details: Win/Mac/App...
+  # - icon: 📇
+  #   title: 工作流使用心得
+  #   details: Win/Mac/App
 ---
 
