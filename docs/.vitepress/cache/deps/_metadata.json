@@ -1,52 +1,58 @@
 {
-  "hash": "5d9df1f5",
+  "hash": "4f997488",
   "configHash": "fc5c677a",
-  "lockfileHash": "8fb78750",
-  "browserHash": "87edcdda",
+  "lockfileHash": "353d0425",
+  "browserHash": "f8c4ed30",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "e33cd1ad",
+      "fileHash": "10a41206",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "68578767",
+      "fileHash": "6f5ed32d",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "14970211",
+      "fileHash": "d3d341c0",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "77dce144",
+      "fileHash": "580c3a06",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "1a5424a3",
+      "fileHash": "2d443689",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "099745cb",
+      "fileHash": "420ba303",
+      "needsInterop": false
+    },
+    "@iconify/vue": {
+      "src": "../../../../node_modules/@iconify/vue/dist/iconify.mjs",
+      "file": "@iconify_vue.js",
+      "fileHash": "c72b6a54",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-OT4ABGTA": {
-      "file": "chunk-OT4ABGTA.js"
+    "chunk-LVOOXUIU": {
+      "file": "chunk-LVOOXUIU.js"
     },
-    "chunk-TL4KESHX": {
-      "file": "chunk-TL4KESHX.js"
+    "chunk-MUVJN64F": {
+      "file": "chunk-MUVJN64F.js"
     }
   }
 }
