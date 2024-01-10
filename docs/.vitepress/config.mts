@@ -28,7 +28,7 @@ export default defineConfig({
       }
     },
     sidebar: generateSidebar({ //自动sidebar
-      collapsed: true, //自动折叠
+      collapsed: false, //自动折叠
       documentRootPath: '/docs', //自动读取根目录
       useTitleFromFrontmatter: true, //读取fontmatter的标题属性,如果没有使用文件名
     }),
