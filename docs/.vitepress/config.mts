@@ -8,7 +8,10 @@ export default defineConfig({
   title: "📖 Library",
   description: "A Library",
   lastUpdated: true,
-  themeConfig: {
+  markdown: {
+    math: true
+  },
+  themeConfig: { 
     footer: {
       // copyright: 'Copyright © 2019-present Evan You'
     },

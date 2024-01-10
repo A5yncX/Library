@@ -4,19 +4,10 @@ import { Icon } from '@iconify/vue'
 //prettier-ignore
 const messages = [
   {
-    title: 'Support me',
-    items: [
-      // { name: 'Github Sponsor', link:'https://github.com/sponsors/aiktb', icon: 'line-md:heart-twotone' },
-      { message: 'Buy Me a Coffee', link: 'https://www.buymeacoffee.com/aiktb', icon: 'line-md:buy-me-a-coffee-twotone' },
-    ],
-  },
-  {
-    title: 'Contact me',
-    items: [
-      { message: 'hey@aiktb.dev', link: 'mailto:hey@aiktb.dev', icon: 'tabler:mail' },
-      { message: '@aiktb39', link: 'https://twitter.com/aiktb39', icon: 'tabler:brand-x' },
-      { message: 't.me/aiktb', link: 'https://t.me/aiktb', icon: 'tabler:brand-telegram' },
-    ],
+    // title: '📮',
+    // items: [
+    //   { message: 'contact@asyncx.top', link: 'mailto:contact@asyncx.top', icon: 'tabler:mail' },
+    // ],
   },
 ]
 </script>
@@ -32,7 +23,7 @@ const messages = [
         :href="item.link"
         target="_blank"
       >
-        <Icon :icon="item.icon" width="1.25em" height="1.25em" aria-hidden="true" />
+        <!-- <Icon :icon="item.icon" width="1.25em" height="1.25em" aria-hidden="true" /> -->
         {{ item.message }}
       </a>
     </address>

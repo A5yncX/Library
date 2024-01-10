@@ -2,8 +2,8 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import Comments from './components/VComments.vue'
-import Message from './components/VMessage.vue'
-import Progress from './components/VProgress.vue'
+// import Message from './components/VMessage.vue'
+// import Progress from './components/VProgress.vue'
 
 const { Layout } = DefaultTheme
 </script>
@@ -11,13 +11,16 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #doc-top>
-      <Progress />
+      <!-- <Progress /> -->
     </template>
     <template #doc-after>
+      <br>
+      <br>
+      
       <Comments />
     </template>
     <template #aside-outline-after>
-      <Message />
+      <!-- <Message /> -->
     </template>
   </Layout>
 </template>

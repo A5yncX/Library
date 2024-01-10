@@ -15,21 +15,21 @@ const { frontmatter, title } = useData()
       what needs to be uninstalled is the giscus comment section that has been inserted into the DOM.
     -->
     <component
-      :is="'script'"
+    :is="'script'"
       src="https://giscus.app/client.js"
-      data-repo="aiktb/Rea"
-      data-repo-id="R_kgDOJQkw9Q"
-      data-category="General"
-      data-category-id="DIC_kwDOJQkw9c4CVeXc"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-lang="en"
-      data-theme="transparent_dark"
-      data-loading="lazy"
-      async
+        data-repo="A5yncX/Library"
+        data-repo-id="R_kgDOLCD29g"
+        data-category="Q&A"
+        data-category-id="DIC_kwDOLCD29s4CcS0n"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async
     />
   </div>
 </template>

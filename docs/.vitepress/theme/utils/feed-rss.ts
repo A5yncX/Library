@@ -4,13 +4,13 @@ import { Feed } from 'feed'
 import { createContentLoader, type ContentData, type SiteConfig } from 'vitepress'
 
 const id: string = 'aiktb'
-const baseUrl: string = `https://aiktb.dev`
+const baseUrl: string = `https://lib.asyncx.top`
 type RssGenerator = (config: SiteConfig) => Promise<void>
 export const feed: RssGenerator = async (config) => {
   const feed: Feed = new Feed({
     id: baseUrl,
-    title: `${id}'s blog`,
-    language: 'en-US',
+    title: `${id}'s Library`,
+    language: 'zh-CN',
     link: baseUrl,
     description: 'A technology-driven blog created by aiktb.',
     image: `${baseUrl}/social-preview.png`,
