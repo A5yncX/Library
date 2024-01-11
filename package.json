@@ -10,6 +10,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@iconify/vue": "^4.1.1"
+    "@iconify/vue": "^4.1.1",
+    "add": "^2.0.6",
+    "vitepress-plugin-rss": "^0.2.0"
   }
 }

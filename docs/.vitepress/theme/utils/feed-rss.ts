@@ -1,43 +1,16 @@
-import { writeFileSync } from 'fs'
-import path from 'path'
-import { Feed } from 'feed'
-import { createContentLoader, type ContentData, type SiteConfig } from 'vitepress'
+import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 
-const id: string = 'aiktb'
-const baseUrl: string = `https://lib.asyncx.top`
-type RssGenerator = (config: SiteConfig) => Promise<void>
-export const feed: RssGenerator = async (config) => {
-  const feed: Feed = new Feed({
-    id: baseUrl,
-    title: `${id}'s Library`,
-    language: 'zh-CN',
-    link: baseUrl,
-    description: 'A technology-driven blog created by aiktb.',
-    image: `${baseUrl}/social-preview.png`,
-    favicon: `${baseUrl}/favicon.ico`,
-    copyright: `Copyright (c) 2023-present ${id}`,
-  })
-
-  const posts: ContentData[] = await createContentLoader('blog/*.md', {
-    excerpt: true,
-    render: true,
-    transform: (rawData) => {
-      return rawData.sort((a, b) => {
-        return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
-      })
-    },
-  }).load()
-
-  for (const { url, frontmatter, html } of posts) {
-    feed.addItem({
-      title: frontmatter.title,
-      id: `${baseUrl}${url.replace(/\/\d+\./, '/')}`,
-      link: `${baseUrl}${url.replace(/\/\d+\./, '/')}`,
-      date: frontmatter.date,
-      content: html!,
-      author: [{ name: `${id}`, email: 'hey@aiktb.dev', link: 'https://github.com/aiktb' }],
-    })
-  }
-
-  writeFileSync(path.join(config.outDir, 'feed.xml'), feed.rss2())
+const baseUrl = 'https://sugarat.top'
+const RSS: RSSOptions = {
+  title: 'AsyncX',
+  baseUrl,
+  copyright: '',
 }
+
+export default defineConfig({
+  vite: {
+    // ↓↓↓↓↓
+    plugins: [RssPlugin(RSS)]
+    // ↑↑↑↑↑
+  }
+})
