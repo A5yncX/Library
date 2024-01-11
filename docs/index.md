@@ -1,5 +1,7 @@
 ---
 title: Index
+layout: home
+comment: false
 ---
 
 <h1 align="center">Library</h1>
