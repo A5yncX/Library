@@ -6,6 +6,7 @@ const baseUrl = 'https://lib.asyncx.top'
 const RSS: RSSOptions = {
   title: 'AsyncX\'s Library',
   baseUrl,
+  language: "zh",
   copyright: '-',
 }
 
@@ -13,9 +14,7 @@ const RSS: RSSOptions = {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
-    // ↓↓↓↓↓
     plugins: [RssPlugin(RSS)]
-    // ↑↑↑↑↑
   },
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
@@ -29,7 +28,6 @@ export default defineConfig({
     footer: {
       // copyright: 'Copyright © 2019-present Evan You'
     },
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: '联系', link: 'https://asyncx.top/zh/#contact' }
