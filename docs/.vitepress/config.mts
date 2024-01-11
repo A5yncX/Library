@@ -1,8 +1,22 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar';
+import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
+
+const baseUrl = 'https://lib.asyncx.top'
+const RSS: RSSOptions = {
+  title: 'AsyncX\'s Library',
+  baseUrl,
+  copyright: '-',
+}
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    // ↓↓↓↓↓
+    plugins: [RssPlugin(RSS)]
+    // ↑↑↑↑↑
+  },
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
   title: "📖 Library",
