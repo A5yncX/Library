@@ -18,13 +18,14 @@ export default defineConfig({
   },
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
-  title: "📖 Library",
+  title: "AsyncX's Library",
   description: "A Library",
-  lastUpdated: true,
+  lastUpdated: false,
   markdown: {
     math: true
   },
   themeConfig: { 
+    logo: '/logo.svg',
     footer: {
       // copyright: 'Copyright © 2019-present Evan You'
     },
@@ -39,6 +40,7 @@ export default defineConfig({
     //     timeStyle: 'short'
     //   }
     // },
+
     sidebar: generateSidebar({ //自动sidebar
       collapsed: false, //自动折叠
       documentRootPath: '/docs', //自动读取根目录
@@ -59,7 +61,7 @@ export default defineConfig({
     },
 
     outline: {
-      label: '页面导航',
+      label: '-页面导航-',
     },
   },
 

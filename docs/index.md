@@ -1,14 +1,11 @@
 ---
 title: Index
-layout: home
-comment: false
+comments: false
 ---
 
 <h1 align="center">Library</h1>
 
 ```python
-import AsyncX as me
-
 me = Person(parents)
 
 def makeHappy(self):
