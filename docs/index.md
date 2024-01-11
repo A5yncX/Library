@@ -1,6 +1,7 @@
 ---
 title: Index
 comments: false
+date: 2000-01-01
 ---
 
 <h1 align="center">Library</h1>
