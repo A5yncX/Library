@@ -5,9 +5,10 @@ outline: deep
 tags:
   - Log
 ---
-::: TODO
-- [ ] 本地化搜索
-- [ ] 作为Vitepress-theme上传Github
+::: tip TODO
+1. 本地化搜索
+2. 作为Vitepress-theme上传Github
+3. 基于月份/日期自行选择CSS渲染
 :::
 
 # V1.0
