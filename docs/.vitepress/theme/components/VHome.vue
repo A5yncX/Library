@@ -31,6 +31,7 @@
 
     .figure {
         padding: 0 1.5rem;
+        padding-top: 30px;
     }
 
     .image {
