@@ -3,11 +3,11 @@ import { Icon } from '@iconify/vue'
 
 // prettier-ignore
 const items = [
-  { title: 'GitHub', link: 'https://github.com/aiktb', icon: 'tabler:brand-github' },
-  { title: 'Twitter', link: 'https://twitter.com/aiktb39', icon: 'tabler:brand-x' },
+  { title: 'GitHub', link: 'https://github.com/a5yncx', icon: 'tabler:brand-github' },
+  { title: 'Twitter', link: 'https://twitter.com/a5yncx', icon: 'tabler:brand-x' },
   { title: 'RSS Feed', link: '/feed.xml', icon: 'tabler:rss' },
-  // { title: 'Github Sponsor', link: 'https://github.com/sponsors/aiktb', icon: 'line-md:heart-twotone' },
-  { title: 'Buy me a coffee', link: 'https://www.buymeacoffee.com/aiktb', icon: 'line-md:buy-me-a-coffee-twotone' },
+  // { title: 'Github Sponsor', link: 'https://github.com/sponsors/asyncx', icon: 'line-md:heart-twotone' },
+  { title: 'Buy me a coffee', link: 'https://www.buymeacoffee.com/asyncx', icon: 'line-md:buy-me-a-coffee-twotone' },
 ]
 
 const generateCopyright = () => {
@@ -54,14 +54,14 @@ const generateCopyright = () => {
       <p class="text-sm/6 font-medium text-[--vp-c-text-2]">
         <a
           class="text-[--vp-c-brand-1] transition duration-300 hover:text-[--vp-c-brand-2]"
-          href="https://github.com/aiktb/Rea/blob/main/LICENSE-POST"
+          href="https://github.com/asyncx/Rea/blob/main/LICENSE-POST"
           target="_blank"
           >CC BY 4.0</a
         >
         |
         <a
           class="text-[--vp-c-brand-1] transition duration-300 hover:text-[--vp-c-brand-2]"
-          href="https://github.com/aiktb/Rea/blob/main/LICENSE-CODE"
+          href="https://github.com/asyncx/Rea/blob/main/LICENSE-CODE"
           target="_blank"
           >MIT License</a
         >
@@ -70,9 +70,9 @@ const generateCopyright = () => {
           {{ generateCopyright() }}
           <a
             class="italic text-[--vp-c-brand-1] transition duration-300 hover:text-[--vp-c-brand-2]"
-            href="mailto:hey@aiktb.dev"
+            href="mailto:hey@asyncx.dev"
             target="_blank"
-            >aiktb</a
+            >asyncx</a
           >
         </span>
       </p>

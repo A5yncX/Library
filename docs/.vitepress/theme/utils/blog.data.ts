@@ -37,6 +37,6 @@ const transformRawPosts = (rawPosts: ContentData[]) => {
 
 export default createContentLoader('blog/*.md', {
   includeSrc: true,
-  // The raw will not contain any pages that begin with dot, such as `.example.md`.
+  // raw将不包含任何以点开头的页面，例如 '.example.md'。
   transform: (raw) => transformRawPosts(raw),
 })

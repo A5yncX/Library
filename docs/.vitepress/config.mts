@@ -26,9 +26,9 @@ export default defineConfig({
   },
   themeConfig: { 
     logo: '/logo.svg',
-    footer: {
-      // copyright: 'Copyright © 2019-present Evan You'
-    },
+    // footer: {
+    //   copyright: 'Copyright © 2019-present Evan You'
+    // },
     nav: [
       { text: '主页', link: '/' },
       { text: '联系', link: 'https://asyncx.top/zh/#contact' }
