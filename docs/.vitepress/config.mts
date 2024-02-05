@@ -30,8 +30,9 @@ export default defineConfig({
     //   copyright: 'Copyright © 2019-present Evan You'
     // },
     nav: [
-      { text: '主页', link: '/' },
-      { text: '联系', link: 'https://asyncx.top/zh/#contact' }
+      { text: '个人主页', link: 'https://asyncx.top' },
+      { text: '读书记录', link: 'https://weread.asyncx.top' },
+      { text: '联系我', link: 'https://asyncx.top/zh/#contact' }
     ],
     // lastUpdated: {
     //   text: '更新于',
@@ -61,7 +62,7 @@ export default defineConfig({
     },
 
     outline: {
-      label: '-页面导航-',
+      label: '📖目录',
       level: [1,6],
     },
   },
