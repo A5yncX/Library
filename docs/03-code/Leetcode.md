@@ -120,3 +120,23 @@ class Solution {
 
 
 
+## [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+Given an integer x, return true if x is a palindrome , and false otherwise.
+
+```java
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        } else {
+            int re = 0;
+            int o = x;
+            while (x > 0){
+                re = (re * 10) + (x % 10);
+                x/= 10; // x/=10 means x = x / 10.
+            }
+            return re == o;
+        }
+    }
+}
+```
