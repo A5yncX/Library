@@ -31,8 +31,8 @@ export default defineConfig({
     // },
     nav: [
       { text: '个人主页', link: 'https://asyncx.top' },
-      { text: '读书记录', link: 'https://weread.asyncx.top' },
-      { text: '联系我', link: 'https://asyncx.top/zh/#contact' }
+      { text: '博客', link: 'https://blog.asyncx.top' },
+      // { text: '联系我', link: 'https://asyncx.top/contact' }
     ],
     // lastUpdated: {
     //   text: '更新于',
