@@ -14,7 +14,8 @@ const RSS: RSSOptions = {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
-    plugins: [RssPlugin(RSS)]
+    plugins: []
+    // plugins: [RssPlugin(RSS)]
   },
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
