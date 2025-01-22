@@ -14,7 +14,8 @@ const RSS: RSSOptions = {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
-    plugins: [RssPlugin(RSS)]
+    plugins: []
+    // plugins: [RssPlugin(RSS)]
   },
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
@@ -31,8 +32,8 @@ export default defineConfig({
     // },
     nav: [
       { text: '个人主页', link: 'https://asyncx.top' },
-      { text: '读书记录', link: 'https://weread.asyncx.top' },
-      { text: '联系我', link: 'https://asyncx.top/zh/#contact' }
+      { text: '博客', link: 'https://blog.asyncx.top' },
+      // { text: '联系我', link: 'https://asyncx.top/contact' }
     ],
     // lastUpdated: {
     //   text: '更新于',
