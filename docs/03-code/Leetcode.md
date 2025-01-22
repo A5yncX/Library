@@ -140,3 +140,35 @@ class Solution {
     }
 }
 ```
+
+## [66. Plus One](https://leetcode.com/problems/plus-one/)
+You are given a **large integer** represented as an integer array `digits`, where each `digits[i]` is the `ith` digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading `0`'s.
+
+Increment the large integer by one and return _the resulting array of digits_.
+
+```
+**Input:** digits = [1,2,3]
+**Output:** [1,2,4]
+**Input:** digits = [9]
+**Output:** [1,0]
+```
+
+By using reverse for loop:
+
+```java
+    class Solution {
+        public int[] plusOne(int[] digits) {
+            for (int i = digits.length - 1; i >= 0; i--){
+                if (digits[i] != 9) {
+                    digits[i] += 1;
+                    return digits;
+                } else {
+                    digits[i] = 0;
+                }
+            }
+            int[] nd = new int[digits.length + 1];
+            nd[0] = 1;
+            return nd;
+        }
+    }
+```
