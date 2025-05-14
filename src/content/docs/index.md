@@ -2,6 +2,7 @@
 title: AsyncX's Library
 description: 阅读/技术/心得 存放处
 template: splash
+giscus: false
 hero:
   tagline: 阅读/技术/心得 存放处
   image:

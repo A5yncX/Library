@@ -1,6 +1,7 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightGiscus from 'starlight-giscus'
 
 export default defineConfig({
   // 把内容目录当作 pages 目录
@@ -8,9 +9,9 @@ export default defineConfig({
 
   integrations: [
     starlight({
-      title: 'My Docs',
+      title: 'AsyncX\'s Library',
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/A5yncX' },
       ],
       sidebar: [
         {
@@ -26,6 +27,17 @@ export default defineConfig({
           autogenerate: { directory: '02-diet' },
         },
       ],
+      plugins: [
+       starlightGiscus({
+           repo: 'A5yncX/Library',
+           repoId: 'R_kgDOLCD29g',
+           category: 'Announcements',
+           categoryId: 'DIC_kwDOLCD29s4CcS0l',
+           mapping: 'pathname',
+           inputPosition: 'top',
+           theme: 'catppuccin_mocha'
+       })
+     ],
     }),
   ],
 });
