@@ -10,6 +10,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'AsyncX\'s Library',
+      logo: {
+        src: './src/assets/favicon.svg',
+      },
+       favicon: './src/assets/favicon.svg',
+       lastUpdated: true,
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/A5yncX' },
       ],
