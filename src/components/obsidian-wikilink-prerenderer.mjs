@@ -1,6 +1,7 @@
 // obsidian-wikilink-prerenderer.mjs
-// 将 [[FILENAME#TITLENAME|SHOWNAME]] 预渲染为 <a href>SHOWNAME</a>
+// 将 [[FILENAME#TITLENAME|SHOWNAME]] 预渲染为 <a href>[SHOWNAME]</a>
 // 支持：同一文本节点多个双链；大小写不敏感；index/README 以目录名做别名，并生成目录路由
+// 修正：非 index/README 的文件名段统一按 slug 规则转小写（避免出现 /.../Introduction/）
 
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
@@ -8,7 +9,7 @@ import { visit } from 'unist-util-visit'
 import { toHtml } from 'hast-util-to-html'
 import { h } from 'hastscript'
 
-/** 默认 slugify（接近 GitHub 风格） */
+/** 标题 slug（接近 GitHub 风格）用于 #TITLENAME */
 function defaultSlugify(str) {
   return String(str)
     .trim()
@@ -16,6 +17,16 @@ function defaultSlugify(str) {
     .replace(/[`*_~\[\]{}()!?.:,;"'<>]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
+}
+
+/** 路径片段 slug：用于 URL 的文件名段（目录名保持原样） */
+function defaultPathSegmentSlug(name) {
+  return String(name)
+    .trim()
+    .replace(/[`*_~\[\]{}()!?.:,;"'<>]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .toLowerCase()
 }
 
 /** 递归列出目录下所有文件 */
@@ -50,6 +61,7 @@ async function buildIndex({
   baseUrl = '/',
   exts = ['.md', '.mdx'],
   slugify = defaultSlugify,
+  pathSegmentSlug = defaultPathSegmentSlug, // 新增：文件名段 slugify
 }) {
   const files = (await listFiles(contentDir)).filter(f => exts.includes(path.extname(f)))
   const index = new Map()
@@ -61,15 +73,16 @@ async function buildIndex({
 
     const parsed = path.parse(rel) // { dir, name, ext, base }
     const basePrefix = baseUrl.replace(/\/$/, '')
-
-    // 生成 URL：index/README 走目录路由
-    let url
     const nameLower = parsed.name.toLowerCase()
+
+    // 生成 URL：index/README 走目录路由；其它文件将“文件名段”转为 slug 小写
+    let url
     if (nameLower === 'index' || nameLower === 'readme') {
-      const dir = parsed.dir // e.g. 00-intro
+      const dir = parsed.dir // e.g. 02-diet
       url = `${basePrefix}/${dir ? dir + '/' : ''}`
     } else {
-      const relNoExt = path.join(parsed.dir, parsed.name).replace(/\\/g, '/')
+      const nameSlug = pathSegmentSlug(parsed.name) // ← 关键变更
+      const relNoExt = (parsed.dir ? parsed.dir + '/' : '') + nameSlug
       url = `${basePrefix}/${relNoExt}/`
     }
 
@@ -82,10 +95,7 @@ async function buildIndex({
     // 别名：如果是 index/README，再加一个“文件夹名”作为键
     if (nameLower === 'index' || nameLower === 'readme') {
       const folder = path.basename(parsed.dir).toLowerCase()
-      if (folder) {
-        // 若你保证“不同文件夹内不会有同名”，可以安全设置
-        if (!index.has(folder)) index.set(folder, entry)
-      }
+      if (folder && !index.has(folder)) index.set(folder, entry)
     }
   }
 
@@ -130,6 +140,7 @@ export default function prerenderObsidianWikilinks(options) {
     baseUrl: '/',
     exts: ['.md', '.mdx'],
     slugify: defaultSlugify,
+    pathSegmentSlug: defaultPathSegmentSlug, // 可覆写
     ...options,
   }
 
@@ -159,6 +170,7 @@ export default function prerenderObsidianWikilinks(options) {
           const resolved = resolveLink(token, idx)
 
           if (resolved) {
+            // 文本包裹方括号
             children.push(
               h(
                 'a',
@@ -167,11 +179,10 @@ export default function prerenderObsidianWikilinks(options) {
                   rel: 'noopener noreferrer',
                   style: 'text-decoration: none;',
                 },
-                resolved.text
+                ['[', resolved.text, ']']
               )
             )
           } else {
-            // 未解析则原样保留，方便排查
             children.push(`[[${token}]]`)
           }
 
